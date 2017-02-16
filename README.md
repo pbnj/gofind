@@ -1,6 +1,11 @@
 # gofind
 Traverse all children directories on a file system looking for any file and print their contents.
 
+## Why
+Linux has built-in commands that can be used to achieve the same purpose, namely `find`, but:
+- `find` chokes on directories with spaces.
+- With Go's concurrency primitives, Go can look for files in directories concurrently (and potentially, in parallel), whereas `find` traverses directories sequentially
+
 ## Usage
 ```
 $ gofind --help
