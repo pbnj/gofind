@@ -36,7 +36,7 @@ func walkFunc(path string, f os.FileInfo, err error) error {
 	if err != nil {
 		// skip level
 	} else {
-		fmt.Println("Found .mysql_history in:", path)
+		fmt.Printf("Found %s in: %s", filename, path)
 		fmt.Println(string(data))
 	}
 
